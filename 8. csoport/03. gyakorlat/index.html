@@ -14,9 +14,11 @@
             pointer-events: none;
             color: grey;
         }
+       
         .done::after {
-            content: "✅"; 
+            content: "✅";
         }
+
         #t2div {
             background-color: green;
         }
@@ -26,7 +28,7 @@
     <h1>Eseménykezelés</h1>
     <div>
     <h2>Az oldalon minden olyan hivatkozást tiltsunk le, amelyik nem ELTÉs címre mutat!</h2>
-        <a href="http://www.elte.hu" disabled="">ELTE honlapja</a><br>
+        <a href="http://www.elte.hu">ELTE honlapja</a><br>
         <a href="http://webprogramozas.inf.elte.hu">Webprogramozás szerver</a><br>
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript referencia</a><br>
         <a href="http://jsfiddle.net/">JavaScript homokozó</a><br></div>
@@ -46,7 +48,7 @@
             <li>Aludni másfél órát</li>
         </ul>
     <h2>ColorPixel lebutítva</h2>
-    <h4> a) Javascripttel készítsünk egy 10x10-es táblázatot 10x10-es cellákkal a "#table" div-be. </h4>
+    <h4> a) Javascripttel készítsünk egy 10x10-es táblázatot a "#table" div-be. </h4>
     <h4> b) A cellákra kattintáskor a color inputból bekért színnel töltse ki a cellát.</h4>
     <h4> c) Ha az alt gomb le van nyomva, delegáljuk a feladatot a sor összes cellájára! <a href="https://github.com/gvikthor/Webprogramozas/tree/master/20-21-2/Deleg%C3%A1l%C3%A1s">Thor delegál</a></h4>
     <input type="color" id="cinput">
