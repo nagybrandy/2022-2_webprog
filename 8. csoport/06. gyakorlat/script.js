@@ -43,19 +43,35 @@ const o_seb = -200
 let points = 0
 let hscore = 0
 
+let bird = new Image()
+let col = new Image()
+let bg = new Image()
+bird.src = 'src/bird.png'
+col.src = 'src/column.png'
+bg.src = 'src/bg.png'
+
+let game = true
+let highscores = []
 // függények
 function render(){
-  // az előző állapotot törölni
-  ctx.fillStyle = "lightblue"
-  ctx.fillRect(0,0, canvas.width, canvas.height)
+  if(game){
+    // az előző állapotot törölni
+    ctx.fillStyle = "lightblue"
+    ctx.drawImage(bg, 0,0, canvas.width, canvas.height)
 
-  // madár kirajzolása
-  ctx.fillStyle = "brown"
-  ctx.fillRect(madar.x, madar.y, madar.w, madar.h)
+    // madár kirajzolása
+    ctx.fillStyle = "brown"
+    ctx.drawImage(bird, madar.x, madar.y, madar.w, madar.h)
 
-  // oszlopok kirajzolása
-  ctx.fillStyle = "white"
-  oszlopok.forEach(o => ctx.fillRect(o.x, o.y, o.w, o.h))
+    // oszlopok kirajzolása
+    ctx.fillStyle = "white"
+    oszlopok.forEach(o => ctx.drawImage(col,o.x, o.y, o.w, o.h))
+
+    // szöveg
+    ctx.font = "25px Comic Sans"
+    ctx.fillStyle = "darkgreen"
+    ctx.fillText(`Pontok: ${points}`, 10,30)
+  }
 }
 
 function update(dt){
@@ -80,11 +96,12 @@ function update(dt){
 }
 
 function jatekCiklus(most = performance.now()){
+  console.log("Start!")
   const dt = (most - elozoIdo) / 1000
   elozoIdo = most
   update(dt)
   render()
-  requestAnimationFrame(jatekCiklus)
+  if(game) requestAnimationFrame(jatekCiklus)
 }
 
 document.addEventListener("keydown", (e)=>{
@@ -123,28 +140,46 @@ function utkozik(a,b){
 }
 
 function gameOver(){
-  restart()
+
+  // kiírás
+  ctx.fillStyle = "lightblue"
+  ctx.drawImage(bg, 0,0, canvas.width, canvas.height)
+  ctx.fillStyle = "darkgreen"
+  ctx.font = "100px Arial"
+  ctx.fillText("Game Over", 30,225)
+  game = false
   if(points>hscore) hscore = points
-  points = 0
-  console.log("gameOver")
+
 }
 
+document.querySelector("button").addEventListener("click", restart)
+
 function restart(){
+  game = true
   madar.x = 50
   madar.y = canvas.height/2
   madar.vy = 0
+  elozoIdo = performance.now()
   oszlopok.shift()
   oszlopok.shift()
+
+  let newrec = new Object()
+  newrec.name = document.querySelector("input").value
+  newrec.points = points
+  highscores.push(newrec)
+  console.log(highscores)
+  points = 0
   ujOszlop()
+  jatekCiklus()
 }
 
 // futtatás
 ujOszlop()
 jatekCiklus()
 
-// kiírni a posztszámítás
-// kiírni a gameover
-// kiírni a highscore
-// localStorageba a highscore
-// új játék gomb, ha rákattintunk, csak akkor induljon
-// alakzatokat kicserélni a rendes képekre
+// kiírni a posztszámítás x
+// kiírni a gameover x
+// kiírni a highscoret x
+// localStorageba a highscore x
+// új játék gomb, ha rákattintunk, csak akkor induljon x
+// alakzatokat kicserélni a rendes képekre x
