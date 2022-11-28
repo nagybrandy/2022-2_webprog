@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    width: 60%;
+    margin: auto;
+    background-color: rgb(42, 42, 42);
+    border-radius: 10px;
+}
+
+body{
+    background-color: rgb(32, 32, 32);
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0 auto;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    height: max-content;
+}
+#main {
+    background-image: url("pics/bg.jpg");
+    height: 100px;
+    background-position: center; /* Center the image */
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-size: 1.5em;
+    padding: 0px;
+    margin-top: 0px;
+    position: relative;
+    padding: 50px;
+    border-radius: 10px;
+}
+h1 {
+   margin: 30px;
+   background-color: rgba(212, 124, 124, 0.507);
+   width: 500px;
+   text-align: center;
+   border-radius: 10px;
+}
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+table {
+    margin: 10px;
+    margin-top: 30px;
+    width: 60%;
+    text-align: center;
+    transition: 0.4s;
+}
+table,td,th {
+    border-collapse: collapse;
+    padding: 10px;
+}
+th {
+    background-color: rgba(228, 218, 241, 0.904);
+}
+
+button {
+    margin: 30px;
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+button, input[type=submit] {
+    padding: 15px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+button:hover {
+    background-color: grey;
+}
+#ujkutya {
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 30px;
+    width: 30%;
+    margin: 30px;
+    transition: 0.4s;
+}
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.kan {
+    background-color:#aee0f5;
+}
+.szuka {
+    background-color:#f3d7fa
+}
