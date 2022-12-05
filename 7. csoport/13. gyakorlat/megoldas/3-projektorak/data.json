@@ -1,0 +1,44 @@
+{
+    "627edf6b56208": {
+        "employee_name": "Dr. Programo Zolt\u00e1n",
+        "project_name": "Webprogramoz\u00e1s ZH",
+        "project_hours": 3,
+        "id": "627edf6b56208"
+    },
+    "627edf7c1225c": {
+        "employee_name": "Dr. Programo Zolt\u00e1n",
+        "project_name": "Tansz\u00e9ki elfoglalts\u00e1g",
+        "project_hours": 8,
+        "id": "627edf7c1225c"
+    },
+    "627edf938774b": {
+        "employee_name": "Dr. Programo Zolt\u00e1n",
+        "project_name": "\u00d6nvezet\u0151 j\u00e1rm\u0171 kutat\u00e1s",
+        "project_hours": 120,
+        "id": "627edf938774b"
+    },
+    "627edfaaa9af6": {
+        "employee_name": "Winch Eszter",
+        "project_name": "Adattud\u00f3s mel\u00f3 a 2. feladat p\u00e9ld\u00e1j\u00e1b\u00f3l",
+        "project_hours": 180,
+        "id": "627edfaaa9af6"
+    },
+    "627edfb74966c": {
+        "employee_name": "Winch Eszter",
+        "project_name": "Konferencia",
+        "project_hours": 8,
+        "id": "627edfb74966c"
+    },
+    "627edfbc2f393": {
+        "employee_name": "Winch Eszter",
+        "project_name": "Egy\u00e9b",
+        "project_hours": 16,
+        "id": "627edfbc2f393"
+    },
+    "627edfcfb7196": {
+        "employee_name": "Zs\u00edros B. \u00d6d\u00f6n",
+        "project_name": "\u00dczleti vacsora",
+        "project_hours": 4,
+        "id": "627edfcfb7196"
+    }
+}
